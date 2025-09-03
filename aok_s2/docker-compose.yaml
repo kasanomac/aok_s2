@@ -1,0 +1,12 @@
+services:
+  # MySQL
+  db:
+    image: mysql:9.0.1
+    container_name: aoki_s2
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: aoki_s2
+      MYSQL_USER: ore
+      MYSQL_PASSWORD: oreore
+    ports:
+    - 3006:3306
