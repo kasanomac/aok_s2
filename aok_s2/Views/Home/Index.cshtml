@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "シラバス検索";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">シラバス検索</h1>
+</div>
+
+<div class="komoku">
+    <form asp-action="Result">
+        <h2>学期</h2>
+        <select asp-items="ViewBag.Semesters" name="semester">
+            <option value="">指定なし</option>
+        </select>
+
+        <h2>授業形態</h2>
+        <select asp-items="ViewBag.ClassFormations" name="classFormation">
+            <option value="">指定なし</option>
+        </select>
+
+        <h2>学部</h2>
+        <select asp-items="ViewBag.Departments" name="department">
+            <option value="">指定なし</option>
+        </select>
+
+        <h2>専攻</h2>
+        <select asp-items="ViewBag.Majors" name="majorId">
+            <option value="">指定なし</option>
+        </select>
+
+        <h2>授業名</h2>
+        <input type="text" name="className" placeholder="授業名で検索" />
+
+        <button type="submit">検索</button>
+    </form>
+
 </div>

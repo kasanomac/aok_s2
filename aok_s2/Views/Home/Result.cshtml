@@ -1,0 +1,32 @@
+@model IEnumerable<aok_s2.Models.Class>
+@using aok_s2.Models;
+
+@{
+    ViewData["Title"] = "検索結果";
+}
+
+<h1>検索結果</h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>学期</th>
+        <th>授業形態</th>
+        <th>授業名</th>
+        <th>曜日・時限</th>
+        <th>担当</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Semester</td>
+                <td>@c.ClassFormation</td>
+                <td>@c.ClassName</td>
+                <td>@c.Period</td>
+                <td>@c.Teacher</td>
+            </tr>
+        }
+    </tbody>
+</table>
